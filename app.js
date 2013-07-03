@@ -25,11 +25,14 @@ Ext.application({
     requires: [
         'Ext.MessageBox'
     ],
-
+    
     views: [
-        'Main'
+        'Main','menuContainer','menulist'
     ],
-
+    models: ['menulist'],
+    stores: ['menulists'],
+    controllers: ['menuController'],
+    
     icon: {
         '57': 'resources/icons/Icon.png',
         '72': 'resources/icons/Icon~ipad.png',
@@ -53,18 +56,21 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('menu.view.Main'));
-    },
+       // Ext.Viewport.add(Ext.create('menu.view.Main'));
+        Ext.Viewport.add({
+            xclass: 'menu.view.Main'
+        });
+    }//,
 
-    onUpdated: function() {
-        Ext.Msg.confirm(
-            "Application Update",
-            "This application has just successfully been updated to the latest version. Reload now?",
-            function(buttonId) {
-                if (buttonId === 'yes') {
-                    window.location.reload();
-                }
-            }
-        );
-    }
+//    onUpdated: function() {
+//        Ext.Msg.confirm(
+//            "Application Update",
+//            "This application has just successfully been updated to the latest version. Reload now?",
+//            function(buttonId) {
+//                if (buttonId === 'yes') {
+//                    window.location.reload();
+//                }
+//            }
+//        );
+//    }
 });

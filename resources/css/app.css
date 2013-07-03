@@ -6223,7 +6223,7 @@ body.x-desktop {
 }
 /* line 59, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
 .x-list .x-list-item .x-list-item-body, .x-list .x-list-item.x-list-item-tpl .x-innerhtml {
-  padding: 12px 15px;
+  padding: 25px 15px 80px;
 }
 
 /* line 66, /Users/jamieavins/git/SDK/touch/resources/themes/stylesheets/sencha-touch/default/src/dataview/_List.scss */
@@ -7013,3 +7013,4 @@ body.x-desktop {
   background-image: linear-gradient(top, #bababa, #c7c7c7 10%, #d3d3d3 65%, #d5d5d5);
   color: black;
 }
+.avatar{background-position:center center;-webkit-border-radius:0.5em;float:left;border:0;border-radius:0.5em;width:80px;height:80px;background-size:47px auto}

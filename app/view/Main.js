@@ -3,33 +3,21 @@ Ext.define('menu.view.Main', {
     xtype: 'main',
     requires: [
         'Ext.TitleBar',
-        'Ext.Video'
+        'Ext.Video',
+        //'menu.view.menuContainer',
+        'menu.view.menulist'
     ],
     config: {
+    	
         tabBarPosition: 'bottom',
 
         items: [
-            {
-                title: 'Welcome',
-                iconCls: 'home',
 
-                styleHtmlContent: true,
-                scrollable: true,
-
-                items: {
-                    docked: 'top',
-                    xtype: 'titlebar',
-                    title: 'Welcome to Sencha Touch 2'
+				{
+            	  xtype: 'menuContainer'
                 },
-
-                html: [
-                    "You've just generated a new Sencha Touch 2 project. What you're looking at right now is the ",
-                    "contents of <a target='_blank' href=\"app/view/Main.js\">app/view/Main.js</a> - edit that file ",
-                    "and refresh to change what's rendered here."
-                ].join("")
-            },
             {
-                title: 'Get Started',
+                title: '最新通知',
                 iconCls: 'action',
 
                 items: [
