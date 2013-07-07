@@ -25,11 +25,12 @@ Ext.application({
     requires: [
         'Ext.MessageBox'
     ],
-
+    controllers:['serviceController'],
     views: [
         'Main'
     ],
-
+    stores:['serviceDAO'],
+    models:['serviceVO'],
     icon: {
         '57': 'resources/icons/Icon.png',
         '72': 'resources/icons/Icon~ipad.png',

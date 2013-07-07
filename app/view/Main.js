@@ -3,12 +3,17 @@ Ext.define('menu.view.Main', {
     xtype: 'main',
     requires: [
         'Ext.TitleBar',
+        'menu.view.service.serviceContainer',
+        'menu.view.service.storeServiceView',
         'Ext.Video'
     ],
     config: {
         tabBarPosition: 'bottom',
 
         items: [
+              {
+              	xtype: 'serviceContainer'
+              },
             {
                 title: 'Welcome',
                 iconCls: 'home',
